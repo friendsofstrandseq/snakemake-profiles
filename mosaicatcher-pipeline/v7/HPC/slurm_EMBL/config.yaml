@@ -19,8 +19,8 @@ default-resources:
   - time="00:30:00"
   - constraint=""
 
-set-resources:
-  ashleys_mark_duplicates: constraint="rome"
+# set-resources:
+#   ashleys_mark_duplicates: constraint="rome"
 
 max-jobs-per-second: 100
 max-status-checks-per-second: 100
