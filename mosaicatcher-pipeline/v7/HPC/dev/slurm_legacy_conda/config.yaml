@@ -1,6 +1,7 @@
 # Cluster command
 cluster: mkdir -p logs/{rule} errors/{rule} &&
   sbatch
+  --account datasci
   --partition={resources.partition}
   --qos={resources.qos}
   --cpus-per-task={threads}

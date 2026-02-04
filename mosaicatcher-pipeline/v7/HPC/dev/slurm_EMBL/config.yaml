@@ -1,6 +1,7 @@
 # Cluster command
 cluster: mkdir -p logs/{rule} errors/{rule} &&
   sbatch
+  --account datasci
   --partition={resources.partition}
   --qos={resources.qos}
   --cpus-per-task={threads}
@@ -11,7 +12,6 @@ cluster: mkdir -p logs/{rule} errors/{rule} &&
   --time={resources.time}
   --constraint={resources.constraint}
 
-
 # Default ressources for all rules
 default-resources:
   - partition=htc
@@ -20,10 +20,9 @@ default-resources:
   - time="00:30:00"
   - constraint=""
 
-set-resources:
-  ashleys_mark_duplicates:
-    constraint: "milan\\|rome"
-
+# set-resources:
+#   ashleys_mark_duplicates:
+#     constraint: "milan\\|rome"
 
 max-jobs-per-second: 100
 max-status-checks-per-second: 100
